@@ -1,6 +1,6 @@
 # Note
 
-This package only works in linux environment.
+This package only works in linux environment
 
 # Canvas Text Editor Tutorial
 
