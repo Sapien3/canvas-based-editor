@@ -1,15 +1,19 @@
-var common  = require('./common');
-var fs      = require('fs');
+var common = require("./common");
+var fs = require("fs");
 
-common.package.compile(function (err, source){
-  var dir = __dirname + '/../build';
-  
+common.package.compile(function (err, source) {
+  console.log("source exists?: ", !!source);
+  var dir = __dirname + "/../build";
+
   // Making sure build dir exists
-  try { fs.statSync(dir); }
-  catch (e) { fs.mkdirSync(dir, 0755); }
-  
+  try {
+    fs.statSync(dir);
+  } catch (e) {
+    fs.mkdirSync(dir, 0755);
+  }
+
   // Generating developer (unminified) version
-  var path = dir + '/' + common.name + '.js';
+  var path = dir + "/" + common.name + ".js";
   fs.writeFileSync(path, source);
-  console.log('Developer version: ' + path.replace(__dirname + '/../', ''));
+  console.log("Developer version: " + path.replace(__dirname + "/../", ""));
 });

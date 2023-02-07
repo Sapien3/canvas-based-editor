@@ -1,3 +1,7 @@
+# Note
+
+This package only works in linux environment.
+
 # Canvas Text Editor Tutorial
 
 1.  [Why write another editor?](#why-write-another-editor)
@@ -58,8 +62,8 @@ Array of lines is very straightforward to implement and doesn’t need any expla
 
 Writing text editor in JavaScript has some unfortunate side effects:
 
-*   having to deal with DOM;
-*   handling text input and especially copy & paste.
+- having to deal with DOM;
+- handling text input and especially copy & paste.
 
 I’m not going into details on creating DOM structure in JavaScript since there are a [lot of tutorials](https://www.google.com/search?q=dom%20manipulation%20javascript) on the subject explaining it much better than I would be able to do. Here’s what we need to create:
 
@@ -518,8 +522,8 @@ Source code for this part is available on [github](https://github.com/grassator/
 
 Now that we can use cursor and insert text it’s time to tackle the most complex aspect of text editing – selection. Handling the selection can be split into two major parts that need to work together:
 
-*   calculations and adjustment of selection range within document;
-*   rendering selection highlight and handling user input.
+- calculations and adjustment of selection range within document;
+- rendering selection highlight and handling user input.
 
 I will show you how to implement code that handles both of this aspects.
 
@@ -853,7 +857,6 @@ for (var i = this._scrollTop; i < maxHeight; ++i) {
 ## Afterword
 
 At this point all the major parts are working properly, all that’s left is UI and probably some refactoring and optimization and both of these things are very project and platform specific. If you have any questions on specific issues or you notice a bug in the code, please don’t hesitate to contact me.
-
 
 ## License
 
